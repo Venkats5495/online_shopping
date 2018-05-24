@@ -1,4 +1,4 @@
-<?php 
+<?php
 include "dbc.php";
 
 if(isset($_POST['submit']))
@@ -16,7 +16,7 @@ $reg = mysqli_query($conn,$ins);
 if($reg == true)
 {
 	echo"<script>alert('Data Registered successfully');</script>";
-	
+
 	/*$subject="$user";
    $to="$email";
    $from="venkatsekar5495@gmail.com";
@@ -25,13 +25,13 @@ if($reg == true)
    $header.="Content-type: text/html; charset=UTF-8\r\n";
    $header.="Form: <".$from.">";
    mail($to,$subject,$msg,$header);
-   echo "mail sent";   
+   echo "mail sent";
 */
 }/*
 else
 {
 	echo"<script>alert('Data not Registered');</script>";
-	
+
 	$subject="$user";
    $to="$email";
    $from="venkatsekar5495@gmail.com";
@@ -40,7 +40,7 @@ else
    $header.='Content-type: text/html; charset=UTF-8'."\r\n";
    $header.="Form: <".$from.">";
    mail($to,$subject,$msg,$header);
-   echo "mail sent";   
+   echo "mail sent";
 
 }
 */
@@ -50,18 +50,14 @@ else{
 	echo"<script>alert('This Name Already exists');</script>";
 }
 //Email sent
-   
+
 //echo "$reg";
-//exit;	
+//exit;
 
 }
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Register</title>
-</head>
-<body>
+<?php include "header.php"; ?>
+
 
 <h1 align="center"> Register page</h1>
 <fieldset>
@@ -73,11 +69,10 @@ else{
 <input type="email" name="email" >
 <p>Phone no.</p>
 <input type="tel" name="ph_no" >
-<br><br>	
+<br><br>
 <input type="submit" name="submit" value="submit">
 <br><br>
 <a href="index.php">Back</a>
 </form>
 </fieldset>
-</body>
-</html>
+<?php include "header.php"; ?>
