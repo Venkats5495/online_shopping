@@ -58,21 +58,27 @@ else{
 ?>
 <?php include "header.php"; ?>
 
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+<div class="jumbotron my-5">
+			<form action="register.php" method="post">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" name="email" autofocus="on" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone no</label>
+    <input type="tel" class="form-control" id="phone" name="ph_no" placeholder="Phone Number">
+  </div>
 
-<h1 align="center"> Register page</h1>
-<fieldset>
-<legend>Register</legend>
-<form action="register.php" method="post">
-<p>User Name</p>
-<input type="text" name="user" autofocus=on	 required>
-<p>Email</p>
-<input type="email" name="email" >
-<p>Phone no.</p>
-<input type="tel" name="ph_no" >
-<br><br>
-<input type="submit" name="submit" value="submit">
-<br><br>
-<a href="index.php">Back</a>
+  <button type="submit" name="submit" class="btn btn-primary">Register</button>
 </form>
-</fieldset>
-<?php include "header.php"; ?>
+
+</div>
+		</div>
+	</div>
+</div>
+
+<?php include "footer.php"; ?>
